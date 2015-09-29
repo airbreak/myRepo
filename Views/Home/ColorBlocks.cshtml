@@ -1,0 +1,42 @@
+﻿@{
+    ViewBag.Title = "ColorBlocks";
+}
+<style>
+    #colorsContainer li {
+        width: 100px;
+        height: 30px;
+        margin-top:2px;
+        text-align:center;
+        color:white;
+        line-height:27px;
+    }
+</style>
+<script>
+    $(function () {
+        $('input').on('click', function () {
+            var colors = ['#9BC6EF',
+                                '#707074',
+                                '#AAF09C',
+                               '#F8B883',
+                                '#0077CC',
+                                '#2B908F',
+                                '#90EE7E',
+                                '#F45B5B',
+                                '#7798BF',
+                                '#AAEEEE',
+                                '#5BB65B',
+                                '#2C2C2C',
+                                '#8D4654',
+                                '#9B5E4A'];
+            var len = colors.length;
+            var $container = $('#colorsContainer');
+            for (var i = 0; i < len; i++) {
+                $container.append('<li style="background-color:' + colors[i] + '">' + colors[i] + '</li>');
+            }
+        });
+    });
+</script>
+<h2>ColorBlocks</h2>
+<input type="button" value="显示颜色块" />
+<ul id="colorsContainer"></ul>
+

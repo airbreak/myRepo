@@ -1,0 +1,22 @@
+﻿<script src="../../Scripts/libs/jquery-1.7.1.min.js"></script>
+@{
+    ViewBag.Title = "Canvas";
+}
+
+ @*canvas画图*@
+<h2>canvas画图</h2>
+<div style="width:400px;height:500px; margin: 0 auto; border:1px solid #808080;">
+    <canvas id="bargraphCanvas"  width="400" height="500"></canvas>
+    <input type="button" id="mybtn" value="测试class" />
+</div>
+<script src="../../Scripts/custom/myConvast.js"></script>
+
+<h2>多个图片组合</h2>
+<div style="width:1360px;height:700px; margin: 0 auto; border:1px solid #808080;">
+    <canvas id="bargraphCanvasSet"></canvas>
+    <canvas id="bargraphCanvasSet1" width="1024" height="1024"></canvas>
+    <input type="button" id="mybtnSet" value="测试class" />
+    <input type="button" id="getImgFromCanvas" value="获得图片" />
+    <img src="" id="imgFromCanvas" style="border:1px solid red;" />
+    <input type="button" id="getFileSize" value="获得大小" />
+</div>

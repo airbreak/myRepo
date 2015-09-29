@@ -1,0 +1,38 @@
+﻿@{
+    ViewBag.Title = "TestAtFunctionMy";
+}
+<script src="../../Scripts/libs/jquery-1.8.2.min.js"></script>
+<script src="../../Scripts/libs/pinyinSearch/cornerFriendsEngine.js"></script>
+<script src="../../Scripts/custom/myAtFriends.js"></script>
+<h2>TestAtFunctionMy</h2>
+<style>
+    #t {
+
+    }
+    .atTextArea {
+        font-family: 'Microsoft YaHei';
+        font-size: 14px;
+        width: 500px;
+        height: 100px;
+    }
+
+    .likeAtTextArea {
+        position:absolute;
+        z-index:-100;
+    }
+
+    .atFriendsContianer {
+        height:20px;
+        width:20px;
+        background-color:red;
+        position:absolute;
+        display:none;
+    }
+
+</style>
+<div style="height: 200px; width: 1000px; border: 1px solid #808080; position:relative;">
+    <textarea id="t" class="atTextArea"></textarea>
+    <div id="atResults" class="atTextArea likeAtTextArea"></div>
+    <div class="atFriendsContianer"></div>
+    </div>
+

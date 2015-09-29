@@ -1,0 +1,29 @@
+﻿@{
+    ViewBag.Title = "AutoComplate";
+}
+@*<link href="../Scripts/libs/bootstrap/bootstap.css" rel="stylesheet" />*@
+<link href="../Content/progressBar.css" rel="stylesheet" />
+@*<script src="../Scripts/libs/bootstrap/bootstrap.js"></script>*@
+@*<link href="../Scripts/libs/bootstrap/bootstrap.min.css" rel="stylesheet" />*@
+<script src="../Scripts/libs/bootstrap/bootstrap.min.js"></script>
+<style>
+    #progressBar {
+        display: none;
+    }
+</style>
+<title>Progressbar</title>
+<script>
+    $(function () {
+        $('#showBar').click(function () {
+            $('#progressBar').show();
+        });
+    });
+</script>
+<div class="progress progress-striped active" id="progressBar">
+    <div class="progress-bar progress-bar-warning" role="progressbar"
+         aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"
+         style="width: 40%;">
+        <span class="sr-only">40% 完成</span>
+    </div>
+</div>
+<input type="button" value="显示进度条" id="showBar" />

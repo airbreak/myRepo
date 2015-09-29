@@ -1,0 +1,32 @@
+﻿@{
+    ViewBag.Title = "GetDiscussTime";
+}
+<script src="../../Scripts/custom/showDiscussTime.js"></script>
+
+<style>
+    .item {
+        margin-top:10px;
+        margin-left:10px;
+        height: 200px;
+        width: 300px;
+        border: 1px solid #808080;
+        border-radius: 3px;
+        padding:20px;
+    }
+</style>
+<h2>GetDiscussTime</h2>
+
+<div>超过1个星期直接显示日期</div>
+<div class="item">
+    <input type="text" id="getTimeFormateText" />
+    <input type="button" id="getTimeFormate" value="getTimeFormate" />
+    <div id="showTime"></div>
+</div>
+<br />
+<div>显示间隔时间</div>
+<div class="item">
+     <input type="text" id="getTimeFormateText1" />
+    <input type="button" id="getTimeFormate1" value="getTimeFormate1" />
+    <div id="showTime1"></div>
+    <textarea id="sfe"></textarea>
+</div>

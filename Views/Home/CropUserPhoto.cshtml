@@ -1,0 +1,150 @@
+﻿@{
+    ViewBag.Title = "CropUserPhoto";
+}
+@*<link href="@Url.Content("~/Scripts/libs/jcrop/jquery.Jcrop.min.css")" rel="stylesheet" />*@
+<script type="text/javascript" src="@Url.Content("~/Scripts/libs/jquery.form.js")"></script>
+<script type="text/javascript" src="@Url.Content("~/Scripts/libs/jcrop/jquery.Jcrop.min.js")"></script>
+<script type="text/javascript" src="@Url.Content("~/Scripts/custom/cropuserphoto.js")"></script>
+<link type="text/css" href="@Url.Content("~/Scripts/libs/jcrop/jquery.Jcrop.min.css")" rel="stylesheet" />
+<style>
+    #cropUserPhoto {
+        position: absolute;
+        top: 60px;
+        left: 400px;
+        width: 560px;
+        height: 300px;
+        border: 1px solid #808080;
+        border-radius: 2px;
+        margin: 10px auto;
+        background-color: white;
+    }
+
+    #cropUserMain {
+        height: 200px;
+        width: 90%;
+        margin: 50px auto;
+    }
+
+    .left {
+        width: 200px;
+        height: 100%;
+        float: left;
+    }
+
+    .right {
+        width: 300px;
+        height: 100%;
+        float: right;
+    }
+
+    #origalPhoto, #newPhoto {
+        height: 200px;
+        width: 200px;
+        margin: auto;
+    }
+
+    #newPhoto {
+        display: none;
+    }
+
+        #origalPhoto img, #newPhoto img {
+            height: 200px;
+            width: 200px;
+            border-radius: 3px;
+            border: 1px solid white;
+        }
+
+    #dataImportFileInput {
+        width: 186px;
+        height: 30px;
+    }
+
+    .myBtn {
+        width: 80px;
+        height: 30px;
+        border-radius: 2px;
+        border: 1px solid #337AB7;
+        background-color: #337AB7;
+        color: white;
+        margin-left: 10px;
+    }
+
+        .myBtn:hover {
+            background-color: #286090;
+        }
+
+    /*#regionBox {
+        position:absolute;
+        z-index:1000;
+        width: 80px;
+        height: 80px;
+        border:1px dashed red;
+        cursor:move;
+        top:60px;
+        left:80px;
+    }*/
+
+
+    .file-box {
+        position: relative;
+        width: 340px;
+    }
+
+    .txt {
+        height: 22px;
+        border: 1px solid #cdcdcd;
+        width: 180px;
+    }
+
+    .btn {
+        background-color: #FFF;
+        border: 1px solid #CDCDCD;
+        height: 24px;
+        width: 70px;
+    }
+
+    .file {
+        position: absolute;
+        top: 0;
+        right: 80px;
+        height: 24px;
+        filter: alpha(opacity:0);
+        opacity: 0;
+        width: 260px;
+    }
+</style>
+
+<h2>上传用户头像</h2>
+<div id="cropUserPhoto">
+    <div id="cropUserMain">
+        <div class="left">
+            <div id="origalPhoto">
+                <img src="@Url.Content("~/Files/cropPhoto/original.jpg")" />
+            </div>
+            <div id="newPhoto">
+                <img src="#" />
+                <input type="button" value="裁剪" id="excuseCrop" class="myBtn" />
+                <input type="button" value="取消" id="cancelCrop" class="myBtn" />
+            </div>
+        </div>
+        <div class="right">
+            <form class="dataImportForm" id="metalSpeedInputForm" runat="server" enctype="multipart/form-data">
+                <input type="file" class="dataImportFileInput" name="dataImportFileInput" id="dataImportFileInput" value="上传excel" />
+                <input type="button" value="上传图像" id="uploadImg" class="myBtn" />
+            </form>
+
+        </div>
+    </div>
+</div>
+
+@*<div class="file-box">
+    <form method="post" enctype="multipart/form-data"  id="metalSpeedInputForm">
+        <input type='text' id='textfield' class='txt' />
+        <input type='button' class='btn' value='浏览...' />
+        <input type="file" name="dataImportFileInput" class="file" id="fileField" size="28" onchange="document.getElementById('textfield').value=this.value" />
+        <input type="submit" name="submit" class="btn" id="uploadImg" value="上传" />
+    </form>
+    <img id="testImg" src="#"/>
+</div>*@
+
+

@@ -1,0 +1,113 @@
+﻿@{
+    ViewBag.Title = "Dragable";
+}
+<script src="../../Scripts/libs/jquery-ui-1.9.2.custom.js"></script>
+<script src="/Scripts/libs/OpenLayers.Class.js"></script>
+<script src="/Scripts/libs/corner.script.util.js"></script>
+<script src="/Scripts/libs/myDragable.js"></script>
+<script src="/Scripts/custom/dragableLogic.js"></script>
+<link href="/Content/dragable.css" rel="stylesheet" />
+<h3>jquery Dragable</h3>
+@*<div class="mainContainers">
+    <ul id="myList0" class="myListConCorner">
+        <li id="mylist_00" class="candragable"><a href="">列表</a></li>
+        <li id="mylist_01" class="candragable"><a href="">列表</a></li>
+        <li id="mylist_02" class="candragable"><a href=" ">列表</a></li>
+        <li id="mylist_03" class="candragable"><a href=" ">列表</a></li>
+        <li id="mylist_04" class="candragable"><a href=" ">列表4</a></li>
+        <li id="mylist_05" class="candragable"><a href=" ">列表5</a></li>
+    </ul>
+
+
+    <ul id="myList1" class="myListConCorner">
+        <li id="mylist_11" class="candragable"><a href="">列表</a></li>
+        <li id="mylist_12" class="candragable"><a href=" ">列表</a></li>
+        <li id="mylist_13" class="candragable"><a href=" ">列表</a></li>
+        <li id="mylist_14" class="candragable"><a href=" ">列表4</a></li>
+        <li id="mylist_15" class="candragable"><a href=" ">列表5</a></li>
+    </ul>
+    <div style="clear: both;"></div>
+    <div id="jquryDragableResult"></div>
+</div>*@
+
+
+<h>corner Dragable</h>
+<div class="mainContainers" id="mainContainersCorner">
+    <ul id="mainContainersUl" style="position:absolute;">
+        <li class="liContainer" id="liContainer">
+            <div style="height: 40px;">必须要做的</div>
+            <div class="maincontainerUlCon" id="maincontainerUlCon">
+                <ul id="myList11" class="myListConCorner">
+                    <li id="mylist_11" class="candragable"><a href="">列表</a></li>
+                    <li id="mylist_12" class="candragable"><a href=" ">列表</a></li>
+                    <li id="mylist_13" class="candragable"><a href=" ">列表</a></li>
+                    <li id="mylist_14" class="candragable"><a href=" ">列表4</a></li>
+                    <li id="mylist_15" class="candragable"><a href=" ">列表5</a></li>
+                    <li id="mylist_16" class="candragable"><a href=" ">列表6</a></li>
+                    <li id="mylist_17" class="candragable"><a href=" ">列表7</a></li>
+                    <li id="mylist_18" class="candragable"><a href=" ">列表8</a></li>
+                </ul>
+            </div>
+            <div>添加任务</div>
+        </li>
+        <li id="liContainer1">
+            <div style="height: 40px;">必须要做的</div>
+            <div  class="maincontainerUlCon"  id="maincontainerUlCon1">
+                <ul id="myList21" class="myListConCorner">
+                    <li id="mylist_21" class="candragable"><a href="">列表</a></li>
+                    <li id="mylist_22" class="candragable"><a href=" ">列表</a></li>
+                    <li id="mylist_23" class="candragable"><a href=" ">列表</a></li>
+                    <li id="mylist_24" class="candragable"><a href=" ">列表4</a></li>
+                    <li id="mylist_25" class="candragable"><a href=" ">列表5</a></li>
+                </ul>
+            </div>
+            <div>添加任务</div>
+        </li>
+        <li>
+            <div style="height: 40px;">必须要做的</div>
+            <div  class="maincontainer">
+                <ul id="myList3" class="myListConCorner">
+                    <li id="mylist_31" class="candragable"><a href="">列表</a></li>
+                    <li id="mylist_32" class="candragable"><a href=" ">列表</a></li>
+                    <li id="mylist_33" class="candragable"><a href=" ">列表</a></li>
+                    <li id="mylist_34" class="candragable"><a href=" ">列表4</a></li>
+                    <li id="mylist_35" class="candragable"><a href=" ">列表5</a></li>
+                </ul>
+            </div>
+            <div>添加任务</div>
+        </li>
+        <li>
+            <div style="height: 40px;">必须要做的</div>
+            <div  class="maincontainer">
+                <ul id="myList4" class="myListConCorner">
+                    <li id="mylist_41" class="candragable"><a href="">列表4</a></li>
+                    <li id="mylist_42" class="candragable"><a href=" ">列表4</a></li>
+                    <li id="mylist_43" class="candragable"><a href=" ">列表4</a></li>
+                    <li id="mylist_44" class="candragable"><a href=" ">列表44</a></li>
+                    <li id="mylist_45" class="candragable"><a href=" ">列表45</a></li>
+                </ul>
+            </div>
+            <div>添加任务</div>
+        </li>
+        <li>
+            <div style="height: 40px;">必须要做的</div>
+            <div  class="maincontainer">
+                <ul id="myList5" class="myListConCorner">
+                    <li id="mylist_51" class="candragable"><a href="">列表5</a></li>
+                    <li id="mylist_52" class="candragable"><a href=" ">列表5</a></li>
+                    <li id="mylist_53" class="candragable"><a href=" ">列表5</a></li>
+                    <li id="mylist_54" class="candragable"><a href=" ">列表54</a></li>
+                    <li id="mylist_55" class="candragable"><a href=" ">列表55</a></li>
+                </ul>
+            </div>
+            <div>添加任务</div>
+        </li>
+    </ul>
+    <div class="myHelperElement">正在拖动，给我闪开！！</div>
+</div>
+
+<div id="myTestAgainDiv"></div>
+
+
+
+

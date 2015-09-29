@@ -1,0 +1,134 @@
+﻿li {
+    list-style: none;
+    /*cursor:pointer;*/
+}
+
+
+
+#myList, #myList1 {
+    float: left;
+    margin-left: 20px;
+    border: 1px solid red;
+    min-height: 50px;
+    width: 140px;
+    max-height: 250px;
+    overflow: auto;
+    vertical-align: top;
+    overflow-x: hidden;
+}
+
+    #myList li, #myList1 li {
+        height: 30px;
+        width: 80px;
+        border: 1px solid red;
+        margin: 10px;
+        margin-left: 0px;
+    }
+
+
+
+.mainContainers {
+    height:360px;
+    width: 800px;
+    border: 1px solid #808080;
+    margin-left:100px;
+}
+#mainContainersCorner {
+    position:relative;
+}
+
+#mainContainersUl {
+    white-space: nowrap;
+    width: 100%;
+    padding:15px;
+    /*padding:0;*/
+    /*margin:0;*/
+}
+
+
+#mainContainersUl > li {
+    margin-left: 20px;
+    border: 1px solid red;
+    min-height: 50px;
+    width: 140px;
+    max-height: 250px;
+    overflow: auto;
+    display: inline-block;
+    position: relative;
+    vertical-align: top;
+    overflow-x: hidden;
+    overflow:hidden;
+}
+
+.myListConCornerDiv {
+    width:80%;
+}
+.myListConCorner>li {
+    /*display: inline-block;*/
+    vertical-align: top;
+    margin-left: 10px;
+    list-style: none;
+    width: 50px;
+    height: 35px;
+    border: 1px solid red;
+    margin: 10px;
+    min-height: 45px;
+}
+
+.myListConCorner {
+    min-height:40px;
+}
+
+.ui-sortable-helper {
+    z-index:500000;
+}
+
+.clonew {
+    border:2px solid blue;
+}
+
+
+/**标杆样式**/
+.sortableplaceholder {
+    background-color: blue;
+    z-index:900000;
+    /*position:absolute;
+    border:1px dotted #aaaaaa;*/
+}
+
+.helperElement {
+    width:1px;
+    opacity:0;
+    height:1px;
+    /*background-color:#808080;
+    border:1px dotted #000000;
+    position:fixed;*/
+}
+
+.myHelperElement {
+    /*width: 15px;
+    height: 15px;*/
+    background-color:#808080;
+    border:1px dotted #000000;
+    position:absolute;
+    /*position:fixed;*/
+    display:none;
+    z-index:999999;
+}
+
+
+#testUl {
+    border:1px solid #000000;
+}
+
+.maincontainerUlCon {
+    height:165px;
+    position:relative;
+}
+
+/**移动效果**/
+.sortableplaceholder {
+    /*background-color:#428BCA;*/
+    border:2px dotted #428BCA !important;
+    width:290px !important;
+}

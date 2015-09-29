@@ -1,0 +1,12 @@
+﻿@{
+    ViewBag.Title = "UploadFileByIframe";
+}
+
+<h2>UploadFileByIframe</h2>
+<div>
+    <form action="@Url.Content("~/UploadFileByIframe/UploadFileByIframe")" id="file" name="file" method="post" target="hidden_frame">
+        <input type="file" id="myfile" />
+        <input type="submit" id="mySubmit" value="submit" />
+        <iframe style="display:none;" name="hidden_frame" id="hidden_frame"></iframe>
+    </form>
+</div>

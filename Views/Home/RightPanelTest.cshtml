@@ -1,0 +1,47 @@
+﻿@{
+    ViewBag.Title = "RightPanelTest";
+}
+<link href="../../Content/rightPanelTest.css" rel="stylesheet" />
+<script src="../../Scripts/custom/rightPanelTest.js"></script>
+<script src="../../Scripts/libs/bootstrap/bootstrap.min.js"></script>
+<script src="../../Scripts/libs/bootstrap/bootstrap-datetimepicker.js"></script>
+<link href="../../Scripts/libs/bootstrap/bootstrap.min.css" rel="stylesheet" />
+<link href="../../Scripts/libs/bootstrap/bootstrap-datetimepicker.min.css" rel="stylesheet" />
+<div id="mydiv">
+    <div id="rightDiscussContainer">
+        <div id="discussTaskTitle">
+            <label>首页的所有任务内容</label>
+            <input type="text" id="testDatepickter" />
+        </div>
+        <div id="discussTaskDesc">
+            <label class="totalDesc">对于完美主义者来说，为了一个渐变而使用一张图片是一件痛苦的事情，就像有苦= =。所以对于普通的渐变而言，能用CSS解决的就不去动用图片。CSS3中为我们提供了linear-gradient方法，可以直接对背景设置渐变。以上即是介绍了使用css来设置字间距、字符间距、字体间距、段落开头缩进，分别使用了letter-spacing（间距设置）、text-indent（缩进）两个css属性，以上是div+css网divcss5为你简单通过实例讲解介绍</label>
+            <div id="discussTaskBasicInfo">
+                <ul>
+                    <li>
+                        <div class="itemName">指派给</div>
+                        <div class="itemValue">JJm</div>
+                    </li>
+                    <li>
+                        <div class="itemName">截止日期</div>
+                        <div class="itemValue">12.13</div>
+                    </li>
+                    <li>
+                        <div class="itemName">工时</div>
+                        <div class="itemValue">1.5</div>
+                    </li>
+                    <li>
+                        <div class="itemName">所用小时</div>
+                        <div class="itemValue">10</div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div id="discussMain">
+            <div id="discussMainTips">动态∨</div>
+            <ul id="discussDetailContent">
+            </ul>
+        </div>
+        <input type="button" id="addInfo" value="addInfo" />
+    </div>
+</div>
+

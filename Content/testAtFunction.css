@@ -1,0 +1,119 @@
+﻿* {
+    font-family:'Microsoft YaHei';
+}
+
+#firstDiv {
+    margin-left:10px;
+    margin-top:20px;
+}
+
+#secondtDiv {
+    margin-left:15px;
+    margin-top:40px;
+    height:450px;
+    width:450px;
+    border:1px solid red;
+}
+#thirdDiv {
+    height:20px;
+    width:10px;
+    border:1px solid red;
+}
+
+#t{
+    padding-left:15px;
+    padding-top:10px;
+    height:auto;
+}
+
+textarea {
+    line-height: 12px;
+    overflow-y: scroll;
+}
+
+
+
+
+ul{
+    margin:0;
+    padding:0;
+}
+ul li {
+    list-style:none;    
+}
+
+#atFriendsContianer {
+     border: 1px solid #999;
+    /* CSS3 inset shadow: */
+    -moz-box-shadow: 0 0 8px #999;
+    -webkit-box-shadow: 0 0 8px #999;
+    box-shadow: 0 0 8px #999;
+    /*圆角*/
+    border-radius: 4px;
+    position: absolute;
+    min-height:60px;
+    width:170px;
+    background-color:white;
+    display:none;
+    position:relative;
+}
+#atFriendshead {
+    height:30px;
+}
+
+#atFriendsInput {
+    height:28px;
+    min-width:95%;
+    margin:0 auto;
+    border:none;
+    color:#D0D1D7;
+    background-color:white;
+    padding-left:5px;
+}
+
+#atFriendsTips {
+    background-color:#E8E8E8;
+    height:25px;
+    line-height:25px;
+    font-size:13px;
+    padding-left:5px;
+}
+
+#atFriendsResultContainer {
+    width:100%;
+}
+
+#atFriendsResultContainer  li{
+    float:left;
+    height:35px;
+    cursor:pointer;
+    width:100%;
+}
+
+#atFriendsResultContainer li .atFriendsItems {
+    width:95%;
+    height:30px;
+    padding-top:5px;
+    margin :0 auto;    
+}
+
+#atFriendsResultContainer li:hover {
+    background-color:#9DD6C5;
+}
+
+#atFriendsResultContainer li .left {
+    float:left;
+    height:25px;
+    width:25px;
+}
+
+#atFriendsResultContainer li img {
+    height:25px;
+    width:25px;
+    border-radius:3px;
+}
+
+#atFriendsResultContainer li .right {
+    float:right;
+    width:130px;
+}

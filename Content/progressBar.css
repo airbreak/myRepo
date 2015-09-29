@@ -1,0 +1,111 @@
+﻿body {
+}
+
+.progress {
+    height:20px;
+    overflow:hidden;
+    margin-bottom:20px;
+    box-shadow:inset 0px 1px 2px rgba(0,0,0,0.1);
+    background-color:rgb(245, 245, 245);
+}
+
+.progress-bar {
+    width:0px;
+    height:100%;
+    text-align:center;
+    color:#fff;
+    line-height:20px;
+    font-size:20px;
+    float:left;
+    box-shadow:inset 0px -1px 0px rgba(0,0,0,0.15);
+    transition-property:width;
+    transition-duration:0.6s;
+    transition-timing-function:ease;
+    transition-delay:0s;
+    background-color:rgb(66, 139, 202);
+}
+
+.progress-striped .progress-bar {
+    background-image:linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+    background-size:40px 40px;
+}
+
+.active.progress .progress-bar {
+    -moz-animation: 0.7s 0s myfirst linear infinite forwards normal; /* Firefox */
+    -webkit-animation: 0.7s 0s myfirst linear infinite forwards normal; /* Safari 和 Chrome */
+    -o-animation: 0.7s 0s myfirst linear infinite forwards normal;
+
+     animation:0.7s 0s myfirst linear infinite forwards normal;
+
+}
+
+@keyframes myfirst
+{
+   from {
+        background-position: 40px 0;
+    }
+
+    to {
+        background-position: 0 0;
+    }
+}
+
+@-moz-keyframes myfirst /* Firefox */
+{
+    from {
+        background-position: 40px 0;
+    }
+
+    to {
+        background-position: 0 0;
+    }
+}
+
+@-webkit-keyframes myfirst /* Safari 和 Chrome */
+{
+     from {
+        background-position: 40px 0;
+    }
+
+    to {
+        background-position: 0 0;
+    }
+}
+
+@-o-keyframes myfirst /* Opera */
+{
+     from {
+        background-position: 0 0;
+    }
+
+    to {
+        background-position: 40px 0;
+    }
+}
+
+.progress-bar-success {
+    background-color: rgb(92, 184, 92);
+}
+
+.progress-striped .progress-bar-success {
+    background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+}
+.progress-bar-info {
+    background-color: rgb(91, 192, 222);
+}
+
+.progress-striped .progress-bar-info {
+    background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+}
+.progress-bar-warning {
+    background-color: rgb(240, 173, 78);
+}
+.progress-striped .progress-bar-warning {
+    background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+}
+.progress-bar-danger {
+    background-color: rgb(217, 83, 79);
+}
+.progress-striped .progress-bar-danger {
+    background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+}

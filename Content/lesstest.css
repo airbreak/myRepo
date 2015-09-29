@@ -1,0 +1,53 @@
+﻿body {
+}
+@boderWidth:1px;
+@boderColor:#cccccc;
+@borderType:dotted;
+ @init: #111111; 
+ @transition: @init*2;
+.wrapper {
+    border:@boderWidth @borderType @boderColor;
+    -moz-border:@boderWidth @borderType @boderColor;
+    -webkit-border-radius:@boderWidth;
+    height:200px;
+    width:400px;
+    padding:2px;
+    .left
+        {
+            height:100px;
+            width:100px;
+            border:@boderWidth @borderType red;
+            float:left;
+        }
+    .right
+        {
+            height:190px;
+            width:200px;
+            float:right;
+            border:@boderWidth @borderType blue;
+        }
+}
+
+.wrapper1 {
+    .wrapper;
+    background-color:#aa6c40;
+}
+
+.boxShadow(@x:0,@y:0,@blur:1px,@color:#000) {
+    -moz-box-shadow:@arguments;
+    -webkit-box-shadow:@arguments;
+    box-shadow:@arguments;
+}
+
+.wrapper2 {
+    .wrapper;
+    .boxShadow(2px,2px,3px,#f36);
+    .left
+    {.boxShadow(2px,2px,3px,@init);}
+    .right 
+    {
+        .boxShadow(2px,2px,3px,@transition);
+        background-color: fadein(#f04615, 10%); 
+    }
+
+}

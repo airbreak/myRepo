@@ -1,0 +1,14 @@
+﻿@{
+    Layout = null;
+}
+<script src="/Scripts/custom/audioTest.js"></script>
+<div>
+    <a href="javascript:void(0);" onclick="getCurrentTime('firefox');">获取播放时间</a>
+    <a href="javascript:void(0);" onclick="playOrPaused('firefox',this);">播放</a>
+    <a href="javascript:void(0);" onclick="hideOrShowControls('firefox',this);">隐藏控制框</a>
+    <a href="javascript:void(0);" onclick="muted('firefox',this);">开启静音</a>
+    <input type="button" value="+" id="upVol" onclick="vol('firefox' , 'up' , this )" />音量<input type="button" value="-" onclick="vol('firefox' , 'down' ,this )" />
+    <audio src="/Content/images/许冠杰 - 沉默是金.mp3" id="audio" controls="controls"></audio>
+
+    当前音量：<span id="nowVol"> - </span>
+</div>

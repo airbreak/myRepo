@@ -1,0 +1,109 @@
+﻿body {
+
+
+}
+
+
+
+
+#mydiv {
+    height:600px;
+    overflow:auto;
+}
+
+#rightDiscussContainer {
+    font-family:'Microsoft YaHei';
+    font-size:14px;
+    width: 500px;
+    min-height: 700px;
+    border-left:1px solid #E4E4E4;
+    background-color:#F1F5F2;
+    padding:0 20px;
+}
+
+#discussTaskTitle{
+    height:90px;
+    width:100%;
+    margin:0 auto;
+    border-bottom:1px solid #E4E4E4;
+}
+
+#discussTaskTitle label {
+      line-height:140px;
+      font-size:16px;
+      color:#39656F;
+      letter-spacing:1px;
+}
+
+#discussTaskDesc {
+    padding-top:10px;
+    color:#515151;
+    min-height:65px;
+    height:auto;
+    border-bottom:1px solid #E4E4E4;
+    font-size:13px;
+    letter-spacing:1px;
+}
+
+#discussTaskDesc .totalDesc {
+    line-height:25px;
+}
+
+
+#discussTaskBasicInfo {
+    margin-top:15px;
+    margin-bottom:15px;
+    height:22px;
+    width:100%;
+}
+
+#discussTaskBasicInfo ul {
+    margin:0;
+    padding:0;
+    height:100%;
+    width:100%;    
+}
+
+#discussTaskBasicInfo ul li {
+    float:left;
+    min-width:100px;
+    max-width:135px;
+    width:auto;
+    list-style:none;
+    margin-right:7px;
+    text-align:center;
+}
+
+#discussTaskBasicInfo ul li div{
+    float:left;
+    width:auto;
+    text-align:center;
+    padding:0 5px 0 0;
+}
+
+#discussTaskBasicInfo ul li .itemName{
+    float:left;
+    height:17px;
+    color:#868686;
+}
+
+#discussTaskBasicInfo ul li .itemValue {
+    border-radius:3px;
+    height:17px;
+    background-color:#0ADABB;
+    margin-left:5px;
+}
+
+#discussMain {
+    min-height:50px;
+    height:auto;
+}
+
+#discussMainTips {
+    width:90px;
+    height:30px;
+    float:right;
+    margin-right:10px;
+    margin-top:10px;
+    color:#877943;
+}

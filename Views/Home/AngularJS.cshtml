@@ -1,0 +1,75 @@
+﻿@{
+    ViewBag.Title = "AngularJS";
+}
+<html>
+<style>
+    .divItem {
+        width: 30px;
+        height: 30px;
+        float: left;
+        margin-left: 100px;
+        border: 1px solid #808080;
+    }
+</style>
+
+<script src="../../Scripts/libs/Angular/angular.min.js"></script>
+<script src="../../Scripts/custom/angularjsTest.js"></script>
+<body>
+    <h2>AngularJS</h2>
+    @*    <div ng-app>
+        Your name:<input type="text" ng-model="yourname1" placeholder="World" />
+        <hr />
+        Hello {{yourname1 || 'World'}}
+    </div>*@
+    <input type="button" value="测试" id="angulartest" />
+    <div ng-app="myApp">
+        <div ng-controller="myContrller">
+            {{message}}
+                <input type="text" ng-model="message" />
+        </div>
+
+        <div ng-controller="HelloController">
+            <label>{{person.name}}</label>
+            <input type="text" ng-model="person.name" />
+            <button ng-click="sayHelloWorld()"></button>
+        </div>
+
+        <h2>取后台数据</h2>
+        <div ng-controller="shoppingController">
+            <ul >
+                <li ng-repeat="item in items">
+                    <label>title:{{item.title}}&nbsp;&nbsp;</label>
+                     <input type="text" ng-model="item.title" />
+                    <label>description:{{item.description}}&nbsp;&nbsp;</label>
+                     <input type="text" ng-model="item.description" />
+                    <label>price:{{item.price}}</label>
+                     <input type="text" ng-model="item.price" />
+                </li>
+            </ul>
+        </div>
+
+        <br/>
+         <h2>form表单验证</h2>
+        <div ng-controller="formCheck">
+            <form name="form" novalidate="novalidate" ng-submit="save()">
+                 <label name="name">Your name</label>
+                <input type="text" name="name" ng-model="user.name" required ng-minlength="2" ng-maxlength="5"/>
+                <span class="error" ng-show="form.$dirty && form.name.$error.required">填写不正确</span>
+@*                 <span class="error" ng-show="form.$dirty && form.name.$error.minlength">长度不能小于2</span>
+                 <span class="error" ng-show="form.$dirty && form.name..$error.maxlength">长度不能大于5</span>*@
+                <br />
+
+
+                <label name="email">Your email</label>
+                <input  type="text" name="email" ng-model="user.email" ng-minlength="5" ng-maxlength="20"  required="required" placeholder="Email Address" />
+                <span class="error" ng-show="form.$dirty && form.name.$error.required">填写不正确</span>
+@*                 <span class="error" ng-show="form.$dirty && form.name.$error.minlength">长度不能小于5</span>
+                 <span class="error" ng-show="form.$dirty && form.name..$error.maxlength">长度不能大于20</span>*@
+                @*<button ng-click="executeCheck()">检测是否改动</button>*@
+                <input type="submit" value="提交" />
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

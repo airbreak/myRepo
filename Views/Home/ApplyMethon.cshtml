@@ -1,0 +1,39 @@
+﻿@{
+    ViewBag.Title = "ApplyMethon";
+}
+
+<script src="src="@Url.Content("~/Scripts/libs/jquery-1.7.1.min.js")"></script>
+<script type="text/javascript" src="@Url.Content("~/Scripts/custom/applymethon.js")"></script>
+    <style>
+        .myItem{
+            height:100px;
+            width:300px;
+            border:1px solid #808080;
+            border-radius:2px;
+            margin-top:5px;
+            padding:3px;
+        }
+    </style>
+<h2>JS 中Apply方法使用</h2>
+<input id="havetry" type="button" value="试下" />
+<br />
+<br />
+<label id="result"></label>
+
+<h2>Apply的巧用</h2>
+<div class="myItem">
+    <label>1.求数组的最大最小值:</label>
+    <label>1,2,3,4,5,6,7,0.9,11</label><br /><br />
+    <input id="getMinMax" type="button" name="name" value="求最大最小值 " />
+</div>
+<div class="myItem">
+    <label>2.数组合并:</label>
+    <br /><br />
+    <label>数组1:</label>
+    <label>1,2,3,4,</label>
+    <label>数组2:</label>
+    <label>4,5,6</label><br /><br />
+    <input id="unite" type="button" name="name" value="合并数组 " />
+</div>
+
+

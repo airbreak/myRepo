@@ -1,0 +1,31 @@
+﻿:root .ico-example {
+    display:inline-block;
+    width:20px;
+    height:20px;
+    background-image:none;
+    position:relative;
+}
+
+.icon-example::before {
+    content: ''; 
+    position: absolute;
+}
+
+.icon-example::after {
+    content: ''; 
+    position: absolute;
+}
+
+.icon-example > z {
+    content: ''; 
+    position: absolute;
+}
+.icon-example > z:before {
+    content: ''; 
+    position: absolute;
+}
+
+.icon-example > z::after {
+    content: ''; 
+    position: absolute;
+}

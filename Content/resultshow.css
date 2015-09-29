@@ -1,0 +1,104 @@
+﻿body {
+    font-size:14px;
+    font-family:'Microsoft YaHei';
+}
+
+#allContianer {
+    position:absolute;
+    top:0;
+    left:0;
+    bottom:0;
+    right:0;
+    background-color:#EEEAE5;
+}
+
+#metalSpeedsResult {
+    height:100%;
+    width:80%;
+    margin:0 auto;
+}
+
+.metalSpeedsResultTitle {
+    width:100%;
+    height:40px;
+    font-size:18px;
+    text-align:center;
+    background-color:#186AA7;
+    color:white;
+    line-height:40px;
+}
+
+#speedResultShowInfo {
+    width:100%;
+    height:35px;
+    margin-top:8px;
+}
+
+#speedResultShowInfo .left {
+    float:left;
+    width:40%;    
+}
+
+#speedResultShowInfo .left span {
+    color:red;
+}
+#speedResultShowInfo .right {
+    float:right;
+    width:50%;    
+}
+
+#speedResultShowInfo ul {
+    margin:0;
+    padding:0;
+}
+#speedResultShowInfo ul li {
+    list-style:none;
+    float:left;
+    width:100px;
+    height:28px;
+    min-width:110px;    
+    margin-right:15px;
+}
+
+#speedResultShowInfo ul li:first-of-type {
+    width:70px;
+    min-width:60px;  
+    font-size:15px; 
+    line-height:25px;
+}
+
+#speedResultSelect {
+    width:100%;
+    height:100%;
+}
+
+.speedResultBtn {
+    margin-right: 8px;
+    float:right;
+    border-radius: 2px;
+    width: 60px;
+    height: 28px;
+    border: 1px solid #808080;
+    background-color:#186AA7;
+    color:white;
+    cursor:pointer;
+}
+
+#speedsResultShow {
+    margin-top:15px;
+    height:72%;
+    width:100%;    
+    text-align:center;
+}
+
+#speedsResultShow img {
+    height:100%;
+    width:85%;  
+    border:3px solid #454545;
+}
+
+#speedsResultControlBar {
+    height:10%;
+    width:100%;
+    border:1px solid blue;
+}
