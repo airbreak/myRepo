@@ -134,6 +134,10 @@ namespace test.Controllers
         {
             return View();
         }
+        public ActionResult OnePageScroll()
+        {
+            return View();
+        }
 
     }
 }
