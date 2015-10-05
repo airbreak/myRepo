@@ -195,6 +195,7 @@
 
 }
 .showColorSize {
+    transition-delay:2s;
     animation: myfirstSize 1s;
     animation-fill-mode:forwards;
 }

@@ -18,7 +18,7 @@ namespace test.Controllers
 
         public ActionResult Products()
         {
-            string ss = "[{\"id\": 0,\"title\": \"Paint pots\",\"description\": \"Pots full of paint\",\"price\": 3.95},{\"id\": 1,\"title\": \"Paint pots\",\"description\": \"Pots full of paint\",\"price\": 6.95}]";
+            string ss = "[{\"id\": 0,\"title\": \"Paint\",\"description\": \"Pots full of paint\",\"price\": 3.95},{\"id\": 1,\"title\": \"Gots\",\"description\": \"Pots full of paint\",\"price\": 6.95}]";
             return Json(ss);
         }
 
