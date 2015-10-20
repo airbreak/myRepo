@@ -31,5 +31,10 @@ namespace test.Controllers
             return View();
         }
 
+        public ActionResult BackgroundSize() 
+        {
+            return View();
+        }
+
     }
 }

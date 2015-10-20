@@ -139,5 +139,15 @@ namespace test.Controllers
             return View();
         }
 
+        public ActionResult MediaQueries() 
+        {
+            return View();
+        }
+
+        public ActionResult H5Swap() 
+        {
+            return View();
+        }
+
     }
 }

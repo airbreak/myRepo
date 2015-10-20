@@ -6,4 +6,12 @@
     $(document).scroll(function () {
         $('.colorSize').addClass('showColorSize');
     });
+
+    $('#tryShake').click(function () {
+        $('.wrongAnsweInfo').addClass('wrongAnsweInfoShow');
+        window.setTimeout(function () {
+            $('.wrongAnsweInfo').removeClass('wrongAnsweInfoShow');
+        }, 700);
+    });
+
 });

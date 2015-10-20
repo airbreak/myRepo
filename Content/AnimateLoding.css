@@ -212,3 +212,62 @@
         opacity:1;
     }
 }
+
+.mydiv {
+    height:400px;
+    width:400px;
+    overflow:hidden;
+    border:1px solid red;
+}
+.gameResultPanelHide {
+    background-color:blue;
+    margin: 10px auto;
+    height:300px;
+    width:300px;
+    animation:aGameResultPanelHide 1.7s;
+    animation-fill-mode:forwards;
+    animation-delay:0.2s;
+}
+@keyframes aGameResultPanelHide {
+    0% {
+        transform:translateY(4vh) scaleY(.98);
+    }
+     80% {
+       transform:translateY(0vh) scaleY(1.02);
+    }
+   100%{
+        transform:translateY(-80vh) scaleY(.98);  
+        opacity: 0;
+    }
+}
+
+.wrongAnsweInfo {
+    height:340px;
+    width:266px;
+    /*display: none;*/
+    background: url(/Content/images/10.png) 0 0 no-repeat;
+    background-size: cover;
+    transition: width 1s ease;
+    opacity:0;
+}
+
+.wrongAnsweInfoShow {
+    animation: aWrongAnsweInfoShow .7s;
+    -webkit-animation: aWrongAnsweInfoShow 0.7s;
+}
+
+@keyframes aWrongAnsweInfoShow {
+    0%,60%,100% {
+        /*display: none;*/
+        opacity:0;
+    }
+   85% {
+        /*display: block;*/
+        opacity:1;
+    }
+
+    50% {
+        /*display: block;*/
+        opacity:1;
+    }
+}

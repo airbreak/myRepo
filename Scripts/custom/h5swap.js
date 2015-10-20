@@ -1,0 +1,1 @@
+﻿var pageSlider = PageSlider.case();

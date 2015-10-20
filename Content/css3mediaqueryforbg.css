@@ -1,0 +1,81 @@
+﻿body {
+}
+.mybg {
+    background:url(../../Content/images/css3img.jpg) 0 0 no-repeat;
+    border:1px solid red;
+    height:780px;
+    width:100%;
+}
+
+@media only screen and (min-width:1024px) and (min-height:768px) {
+    .mybg {
+        background-size:contain;
+    }
+}
+
+@media only screen 
+and (max-width:1024px) and (max-height:768px)
+and (min-width:600px) and (max-height:480px) {
+    .mybg {
+        background-size:1024px 768px;
+        -webkit-background-size:1024px 768px;
+        -moz-background-size:1024px 768px;
+        -o-background-size:1024px 768px;
+    }
+}
+
+@media only screen and (max-width:600px) and (max-height:480px) {
+    .mybg {
+        background-size:600px 480px;
+        -webkit-background-size:600px 480px;
+        -moz-background-size:600px 480px;
+        -o-background-size:600px 480px;
+    }
+}
+
+.demo {
+    width:300px;
+    background:#60f;
+    padding:3px 0;
+}
+.box {
+    background:#f60;
+    height:50px;
+    border:5px solid red;
+    padding:10px;
+    width:90%;
+    width:-moz-calc(100%-(10px + 5px)*2);
+    width:-webkit-calc(100%-(10px + 5px)*2);
+    width: calc(100% - (10px + 5px) * 2);
+}
+
+    .content-box{
+        box-sizing:content-box;
+        -moz-box-sizing:content-box;
+        -webkit-box-sizing:content-box;
+        width: 100px;
+        height: 100px;
+        padding: 20px;
+        border: 5px solid #E6A43F;
+        background: blue;
+    }
+    .padding-box{
+        box-sizing:padding-box;
+        -moz-box-sizing:padding-box;
+        -webkit-box-sizing:padding-box;
+        width: 100px;
+        height: 100px;
+        padding: 20px;
+        border: 5px solid #186645;
+        background: red;                
+    }
+    .border-box{
+        box-sizing:border-box;
+        -moz-box-sizing:border-box;
+         -webkit-box-sizing:border-box;
+        width: 100px;
+        height: 100px;
+        padding: 20px;
+        border: 5px solid #3DA3EF;
+        background: yellow;
+    }

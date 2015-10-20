@@ -1,4 +1,5 @@
-﻿var canvas, context;
+﻿
+var canvas, context;
 var img,//图片对象
     imgIsLoaded,//图片是否加载完成;
     imgX = 100,
@@ -113,66 +114,140 @@ function windowToCanvas(x, y) {
 
 
 /********图片拼接*********/
-var arr = [
-            { x: 0, y: 0, url: './../Content/map/1_3.png' },
-            { x: 512, y: 0, url: './../Content/map/1_4.png' },
-            { x: 0, y: 512, url: './../Content/map/2_3.png' },
-            { x: 512, y: 512, url: './../Content/map/2_4.png' }
-];
-$(function () {
-    var imgArr = [];
+//var arr = [
+//            { x: 0, y: 0, url: './../Content/map/1_3.png' },
+//            { x: 512, y: 0, url: './../Content/map/1_4.png' },
+//            { x: 0, y: 512, url: './../Content/map/2_3.png' },
+//            { x: 512, y: 512, url: './../Content/map/2_4.png' }
+//];
+//$(function () {
+//    var imgArr = [];
 
-    canvas = document.getElementById('bargraphCanvasSet');
-    context = canvas.getContext('2d');
+//    canvas = document.getElementById('bargraphCanvasSet');
+//    context = canvas.getContext('2d');
 
-    var canvas1 = document.getElementById('bargraphCanvasSet1');
-    var context1 = canvas1.getContext('2d');
+//    var canvas1 = document.getElementById('bargraphCanvasSet1');
+//    var context1 = canvas1.getContext('2d');
 
-    $('#mybtnSet').click(function () {
-        loadImg();
-    });
-    var index=0;
-    function loadImg() {
-        img = new Image();
+//    $('#mybtnSet').click(function () {
+//        loadImg();
+//    });
+//    var index=0;
+//    function loadImg() {
+//        img = new Image();
 
-        img.onload = function () {
-            var ss = img.nameProp;
-            var x2, y2;
-            for (var i = 0; i < 4; i++) {
-                if (arr[i].url.indexOf(ss) > 0) {
-                    x2 = arr[i].x;
-                    y2 = arr[i].y;
-                    break;
-                }
-            }
-            imgIsLoaded = true;
-            imgArr.push(img);
-          
-             
-            context.drawImage(img, x2, y2);
-            context1.drawImage(img, x2, y2);
+//        img.onload = function () {
+//            var ss = img.nameProp;
+//            var x2, y2;
+//            for (var i = 0; i < 4; i++) {
+//                if (arr[i].url.indexOf(ss) > 0) {
+//                    x2 = arr[i].x;
+//                    y2 = arr[i].y;
+//                    break;
+//                }
+//            }
+//            imgIsLoaded = true;
+//            imgArr.push(img);
 
-            index++;
-            if (index > 3) {
-                return;
-            }
-            loadImg(i);
-        }
-        img.src = arr[index].url;
+
+//            context.drawImage(img, x2, y2);
+//            context1.drawImage(img, x2, y2);
+
+//            index++;
+//            if (index > 3) {
+//                return;
+//            }
+//            loadImg(i);
+//        }
+//        img.src = arr[index].url;
+//    }
+
+
+//    $('#getImgFromCanvas').click(function () {
+//        var canvas = document.getElementById('bargraphCanvasSet1');
+//        var img = canvas.toDataURL("image/png");
+//        $('#imgFromCanvas').attr('src', './../Content/map/1_7.png');
+//    });
+
+//    $('#getFileSize').click(function () {
+//        $('#imgFromCanvas')[0].fileSize;
+//    });
+
+//});
+
+
+/*绘制线*/
+//普通直线
+function DrawLinCanvas(canvas) {
+    this.canvas = canvas;
+    this.ctx = canvas.getContext('2d');
+};
+
+DrawLinCanvas.prototype = {
+    contructor: DrawLinCanvas,
+    drawNormalLine: function () {
+        this.clearCanvas();
+        this.ctx.moveTo(20, 20);
+        this.ctx.lineTo(150, 150);
+        this.ctx.lineTo(210, 340);
+        this.ctx.strokeStyle = '#707074';
+        this.ctx.stroke();
+    },
+    drawDiffColorNormalLine: function () {
+        this.clearCanvas();
+        this.ctx.moveTo(100, 30);
+        this.ctx.lineTo(180, 250);
+        this.ctx.strokeStyle = 'red';
+        this.ctx.stroke();
+        
+        this.ctx.beginPath();
+        this.ctx.moveTo(40, 40);
+        this.ctx.lineTo(400, 200);
+        this.ctx.strokeStyle = 'blue';
+        this.ctx.stroke();
+    },
+    drawGradientLine: function () {
+        this.clearCanvas();
+
+        var grd = this.ctx.createLinearGradient(0, 0, 170, 0);
+        grd.addColorStop(0, 'black');
+        grd.addColorStop(0.2, 'red');
+        grd.addColorStop(1, 'yellow');
+
+        this.ctx.moveTo(100, 30);
+        this.ctx.lineTo(180, 250);
+        this.ctx.lineTo(0, 450);
+        this.ctx.strokeStyle = grd;
+        this.ctx.lineCap = "round";
+        this.ctx.lineWidth = 10;
+        this.ctx.stroke();
+
+    },
+    drawPatternLine: function () {
+        this.clearCanvas();
+    },
+    clearCanvas: function () {
+        this.ctx.beginPath();
+        this.ctx.clearRect(0, 0, 800, 400);
     }
+};
+
+var drawLinCanvas = new DrawLinCanvas(document.getElementById('drawLinCanvas'));
+
+document.getElementById('normalLine').onclick = function () {
+    drawLinCanvas.drawNormalLine();
+};
+
+document.getElementById('diffColorNormalLine').onclick = function () {
+    drawLinCanvas.drawDiffColorNormalLine();
+};
 
 
-    $('#getImgFromCanvas').click(function () {
-        var canvas = document.getElementById('bargraphCanvasSet1');
-        var img = canvas.toDataURL("image/png");
-        $('#imgFromCanvas').attr('src', './../Content/map/1_7.png');
-    });
-
-    $('#getFileSize').click(function () {
-        $('#imgFromCanvas')[0].fileSize;
-    });
-
-});
+document.getElementById('gradientLine').onclick = function () {
+    drawLinCanvas.drawGradientLine();
+};
 
 
-
+document.getElementById('patternLine').onclick = function () {
+    drawLinCanvas.drawPatternLine();
+};

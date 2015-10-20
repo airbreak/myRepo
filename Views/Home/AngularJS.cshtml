@@ -11,64 +11,180 @@
         border: 1px solid #808080;
     }
 </style>
-
+<link href="../../Content/angularjs.css" rel="stylesheet" />
 <script src="../../Scripts/libs/Angular/angular.min.js"></script>
 <script src="../../Scripts/custom/angularjsTest.js"></script>
 <body>
     <h2>AngularJS</h2>
-    @*    <div ng-app>
-        Your name:<input type="text" ng-model="yourname1" placeholder="World" />
-        <hr />
-        Hello {{yourname1 || 'World'}}
-    </div>*@
-    <input type="button" value="测试" id="angulartest" />
     <div ng-app="myApp">
-        <div ng-controller="myContrller">
+        <input type="button" value="测试" id="angulartest" />
+        <div ng-controller="myContrller" class="controllerContainer">
+            <p>测试</p>
             {{message}}
                 <input type="text" ng-model="message" />
         </div>
 
-        <div ng-controller="HelloController">
+        <div ng-controller="HelloController" class="controllerContainer">
             <label>{{person.name}}</label>
             <input type="text" ng-model="person.name" />
             <button ng-click="sayHelloWorld()"></button>
         </div>
 
-        <h2>取后台数据</h2>
-        <div ng-controller="shoppingController">
-            <ul >
+
+        <div ng-controller="shoppingController" class="controllerContainer">
+            <h2>取后台数据</h2>
+            <ul>
                 <li ng-repeat="item in items">
                     <label>title:{{item.title}}&nbsp;&nbsp;</label>
-                     <input type="text" ng-model="item.title" />
+                    <input type="text" ng-model="item.title" />
                     <label>description:{{item.description}}&nbsp;&nbsp;</label>
-                     <input type="text" ng-model="item.description" />
+                    <input type="text" ng-model="item.description" />
                     <label>price:{{item.price}}</label>
-                     <input type="text" ng-model="item.price" />
+                    <input type="text" ng-model="item.price" />
                 </li>
             </ul>
         </div>
 
-        <br/>
-         <h2>form表单验证</h2>
-        <div ng-controller="formCheck">
-            <form name="form" novalidate="novalidate" ng-submit="save()">
-                 <label name="name">Your name</label>
-                <input type="text" name="name" ng-model="user.name" required ng-minlength="2" ng-maxlength="5"/>
+
+        <div ng-controller="formCheck" class="controllerContainer">
+            <h2>form表单验证</h2>
+            <form name="form" novalidate="novalidate" ng-submit="save(newUser)">
+                <label name="name">Your name</label>
+                <input type="text" name="name" ng-model="newUser.Name" required />
                 <span class="error" ng-show="form.$dirty && form.name.$error.required">填写不正确</span>
-@*                 <span class="error" ng-show="form.$dirty && form.name.$error.minlength">长度不能小于2</span>
+                @*                 <span class="error" ng-show="form.$dirty && form.name.$error.minlength">长度不能小于2</span>
                  <span class="error" ng-show="form.$dirty && form.name..$error.maxlength">长度不能大于5</span>*@
                 <br />
 
 
                 <label name="email">Your email</label>
-                <input  type="text" name="email" ng-model="user.email" ng-minlength="5" ng-maxlength="20"  required="required" placeholder="Email Address" />
+                <input type="text" name="email" ng-model="newUser.Email" required="required" placeholder="Email Address" />
                 <span class="error" ng-show="form.$dirty && form.name.$error.required">填写不正确</span>
-@*                 <span class="error" ng-show="form.$dirty && form.name.$error.minlength">长度不能小于5</span>
+                @*                 <span class="error" ng-show="form.$dirty && form.name.$error.minlength">长度不能小于5</span>
                  <span class="error" ng-show="form.$dirty && form.name..$error.maxlength">长度不能大于20</span>*@
                 @*<button ng-click="executeCheck()">检测是否改动</button>*@
                 <input type="submit" value="提交" />
             </form>
         </div>
+
+
+        <div ng-controller="CartController" class="controllerContainer">
+            <h2>$watch监听</h2>
+            <div ng-repeat="item in items">
+                <span>{{item.title}}</span>
+                <input type="number" ng-model="item.quantity">
+                <span>{{item.price | currency}}</span>
+                <span>{{item.price * item.quantity | currency}}</span>
+            </div>
+            <div>Total: {{totalCart() | currency}}</div>
+            <div>Discount: {{bill.discount | currency}}</div>
+            <div>Subtotal: {{subtotal() | currency}}</div>
+        </div>
+
+        <div ng-controller="FilterAndQuery" class="controllerContainer">
+            <h2>过滤和排序</h2>
+            <div><span>查询</span><input type="text" ng-model="query" /></div>
+            <div>
+                <span>排序</span>
+                <select ng-model="order">
+                    <option value="name">name</option>
+                    <option value="age">age</option>
+                </select>
+            </div>
+            <br />
+            <h3>升序排列</h3>
+            <ol>
+                <li ng-repeat="person in persons | filter:query | orderBy:order">名字：{{person.name}}  年龄：{{person.age}}
+                </li>
+            </ol>
+
+            <h3>倒序排列</h3>
+            <ol>
+                <li ng-repeat="person in persons | filter:query | orderBy:order:true">名字：{{person.name}}  年龄：{{person.age}}
+                </li>
+            </ol>
+            <h3>按固定的属性排列（age）</h3>
+            <ol>
+                <li ng-repeat="person in persons | filter:query | orderBy:'age'">名字：{{person.name}}  年龄：{{person.age}}
+                </li>
+            </ol>
+            <table>
+                <thead>
+                    <th>排号</th>
+                    <th>名字</th>
+                    <th>年龄</th>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="person in persons | filter:query | orderBy:order">
+                        <td ng-if="$odd" style="background-color: #9BC6EF; color: white;">{{$index+1}}</td>
+                        <td ng-if="$odd" style="background-color: #9BC6EF; color: white;">{{person.name}}</td>
+                        <td ng-if="$odd" style="background-color: #9BC6EF; color: white;">{{person.age}}</td>
+                        <td ng-if="$even" style="background-color: #90EE7E;">{{$index+1}}</td>
+                        <td ng-if="$even" style="background-color: #90EE7E;">{{person.name}}</td>
+                        <td ng-if="$even" style="background-color: #90EE7E;">{{person.age}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+
+        <div ng-controller="VoteImgController" class="controllerContainer">
+            <h2>简单投票系统</h2>
+            <div>
+                <div ng-repeat="item in items | filter:query | orderBy:'vote'">
+                    <img lazy-src="{{item.url}}" alt="" />
+                    <p>{{item.vote}}</p>
+                    <button ng-click="voteIt()"></button>
+                </div>
+            </div>
+        </div>
+
+        <div class="controllerContainer">
+            <h2>指令</h2>
+            <div class="controllerContainerItems">
+                <h4>最简单的指令</h4>
+                <hello></hello>
+            </div>
+            <div class="controllerContainerItems">
+                <h4>trnsclude变换</h4>
+                <fuck>
+                    <br />
+                    <span>原始的内容，</span><br />
+                    <span>还会在这里</span>
+                </fuck>
+            </div>
+            <div class="controllerContainerItems">
+                <h4>Expander</h4>
+                <div ng-controller='SomeController'>
+                    <expander class='expander' expander-title='title'>
+                {{text}}
+            </expander>
+                </div>
+            </div>
+        </div>
+
+        <div class="controllerContainer">
+            <h2>$watch</h2>
+            <div ng-controller="WatchTestController">
+                <input ng-model="expr" type="text" />
+                <p>{{parsedValue}}</p>
+            </div>
+        </div>
+
+        <div class="controllerContainer">
+            <h2>$watch</h2>
+            <div ng-controller="EmailTestController">
+                <input ng-model="to" type="email" />
+                <textarea ng-model="emailBody"></textarea>
+                <pre>{{previewText}}</pre>
+            </div>
+        </div>
+        <div class="controllerContainer">
+            <h2>自己定义过滤器，将首字母转化成大写</h2>
+            <input ng-model="myEnglishName" />
+            <p>{{myEnglishName | lowercase | capitalize}}</p>
+        </div>
+
     </div>
 </body>
 

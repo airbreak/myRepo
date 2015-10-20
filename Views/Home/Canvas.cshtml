@@ -3,20 +3,33 @@
     ViewBag.Title = "Canvas";
 }
 
- @*canvas画图*@
-<h2>canvas画图</h2>
-<div style="width:400px;height:500px; margin: 0 auto; border:1px solid #808080;">
-    <canvas id="bargraphCanvas"  width="400" height="500"></canvas>
-    <input type="button" id="mybtn" value="测试class" />
-</div>
-<script src="../../Scripts/custom/myConvast.js"></script>
+@*canvas画图*@
+<div>
+    <h2>canvas画图</h2>
+    <div style="width: 400px; height: 500px; margin: 0 auto; border: 1px solid #808080;">
+        <canvas id="bargraphCanvas" width="400" height="500"></canvas>
+        <input type="button" id="mybtn" value="测试class" />
+    </div>
+   
 
-<h2>多个图片组合</h2>
-<div style="width:1360px;height:700px; margin: 0 auto; border:1px solid #808080;">
-    <canvas id="bargraphCanvasSet"></canvas>
-    <canvas id="bargraphCanvasSet1" width="1024" height="1024"></canvas>
-    <input type="button" id="mybtnSet" value="测试class" />
-    <input type="button" id="getImgFromCanvas" value="获得图片" />
-    <img src="" id="imgFromCanvas" style="border:1px solid red;" />
-    <input type="button" id="getFileSize" value="获得大小" />
+    <h2>多个图片组合</h2>
+    <div style="width: 1260px; height: 200px; margin: 0 auto; border: 1px solid #808080;">
+        <canvas id="bargraphCanvasSet"></canvas>
+        <input type="button" id="mybtnSet" value="测试class" />
+        <input type="button" id="getImgFromCanvas" value="获得图片" />
+        <img src="" id="imgFromCanvas" style="border: 1px solid red;" />
+        <input type="button" id="getFileSize" value="获得大小" />
+    </div>
+
+    <h2>绘制线</h2>
+    <div style="width: 1000px; height: 400px; margin: 0 auto; border: 1px solid #808080">
+        <canvas id="drawLinCanvas" width="800" height="400"></canvas>
+        <input type="button" value="普通线" id="normalLine" />
+        <input type="button" value="不同颜色普通线" id="diffColorNormalLine" />
+        <input type="button" value="渐变线" id="gradientLine" />
+        <input type="button" value="图片线" id="patternLine" />
+    </div>
 </div>
+
+
+ <script src="../../Scripts/custom/myConvast.js"></script>
