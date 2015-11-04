@@ -173,6 +173,7 @@
     <Content Include="Content\map\2_3.png" />
     <Content Include="Content\map\2_4.png" />
     <Content Include="Content\progressBar.css" />
+    <Content Include="Content\truck.css" />
     <Content Include="Scripts\custom\animateloading.js" />
     <Content Include="Scripts\custom\audioTest.js" />
     <Content Include="Scripts\custom\h5swap.js" />
@@ -457,6 +458,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Home\JSInheritClass.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\CSS3\Truck.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

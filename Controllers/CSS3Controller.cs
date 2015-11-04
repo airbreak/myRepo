@@ -36,5 +36,9 @@ namespace test.Controllers
             return View();
         }
 
+        public ActionResult Truck() {
+            return View();
+        }
+
     }
 }
