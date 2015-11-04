@@ -27,7 +27,7 @@ namespace test.Controllers
             return View("Navigation");
         }
 
-        public ActionResult ApplyMethon() 
+        public ActionResult ApplyMethon()
         {
             return View("ApplyMethon");
         }
@@ -37,12 +37,12 @@ namespace test.Controllers
             return View();
         }
 
-        public ActionResult ShowEchart() 
+        public ActionResult ShowEchart()
         {
             return View();
         }
 
-        public ActionResult UploadFileByIframe() 
+        public ActionResult UploadFileByIframe()
         {
             return View();
         }
@@ -52,7 +52,7 @@ namespace test.Controllers
             return View();
         }
 
-        public ActionResult RightPanelTest() 
+        public ActionResult RightPanelTest()
         {
             return View();
         }
@@ -72,7 +72,7 @@ namespace test.Controllers
             return View();
         }
 
-        public ActionResult SingnalR() 
+        public ActionResult SingnalR()
         {
             return View();
         }
@@ -102,7 +102,7 @@ namespace test.Controllers
             return View();
         }
 
-        public ActionResult SetTextareaCursorPostion() 
+        public ActionResult SetTextareaCursorPostion()
         {
             return View();
         }
@@ -139,13 +139,22 @@ namespace test.Controllers
             return View();
         }
 
-        public ActionResult MediaQueries() 
+        public ActionResult MediaQueries()
         {
             return View();
         }
 
-        public ActionResult H5Swap() 
+        public ActionResult H5Swap()
         {
+            return View();
+        }
+
+        public ActionResult RequireJS()
+        {
+            return View();
+        }
+
+        public ActionResult JSInheritClass() {
             return View();
         }
 

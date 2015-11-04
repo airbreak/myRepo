@@ -1,0 +1,16 @@
+﻿@{
+    ViewBag.Title = "RequireJS";
+    Layout = null;
+}
+
+<h2>RequireJS</h2>
+
+<h2>绘制线</h2>
+<div style="width: 1000px; height: 400px; margin: 0 auto; border: 1px solid #808080">
+    <canvas id="drawLinCanvas" width="800" height="400"></canvas>
+    <input type="button" value="普通线" id="normalLine" />
+    <input type="button" value="不同颜色普通线" id="diffColorNormalLine" />
+    <input type="button" value="渐变线" id="gradientLine" />
+    <input type="button" value="图片线" id="patternLine" />
+</div>
+<script data-main="../../Scripts/custom/requirejs/main" src="../../Scripts/libs/require.js"></script>
