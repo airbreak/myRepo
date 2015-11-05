@@ -40,5 +40,10 @@ namespace test.Controllers
             return View();
         }
 
+        public ActionResult Ellipse() 
+        {
+            return View();
+        }
+
     }
 }
