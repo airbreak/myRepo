@@ -1,0 +1,54 @@
+﻿<script src="../Scripts/libs/jquery.page.js"></script>
+<script src="../Scripts/custom/mypage.js"></script>
+<style>
+    a {
+        text-decoration:none;
+    }
+        a:hover {
+            text-decoration:none;
+        }
+    .tedPageCode {
+        height:100px;
+        width:500px;
+    }
+        .tedPageCode a {
+            display:inline-block;
+            color:#428bca;
+            height:25px;
+            line-height:25px;
+            border:1px solid #ddd;
+            margin:0 2px;
+            border-radius:2px;
+            vertical-align:central;
+        }
+            .tedPageCode a :hover {
+                border-color:#428bca;
+            }
+        .tedPageCode span.current {
+            height:25px;
+            line-height:25px;
+            display:inline-block;
+            padding:0 25px;
+        }
+        .tedPageCode span.disabled {
+            display:inline-block;
+            height:25px;
+            padding:0 25px;
+            color:#bfbfbf;
+            background:#f2f2f2;
+            border:1px solid #bfbfbf;
+            border-radius:4px;
+            vertical-align:central;
+        }
+</style>
+<div class="tedPageCode">
+    <span class="disabled">上一页</span>
+    <span class="current">1</span>
+    <a href="javascript:void(0)" class="tcdNumber">2</a>
+    <a href="javascript:void(0)" class="tcdNumber">3</a>
+    <a href="javascript:void(0)" class="tcdNumber">4</a>
+    <a href="javascript:void(0)" class="tcdNumber">5</a>
+    <span>……</span>
+    <a href="javascript:void(0)" class="tcdNumber">7</a>
+    <a href="javascript:void(0)" class="nextPage">下一页</a>
+</div>

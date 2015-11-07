@@ -180,6 +180,7 @@
     <Content Include="Scripts\custom\h5swap.js" />
     <Content Include="Scripts\custom\indexDB.js" />
     <Content Include="Scripts\custom\jsinheritclass.js" />
+    <Content Include="Scripts\custom\mypage.js" />
     <Content Include="Scripts\custom\onpagescroll.js" />
     <Content Include="Scripts\custom\requirejs\drawline.js" />
     <Content Include="Scripts\custom\requirejs\drawcircle.js" />
@@ -285,6 +286,8 @@
     <Content Include="Scripts\libs\echarts.js" />
     <Content Include="Scripts\libs\h5slider\pageSlider.css" />
     <Content Include="Scripts\libs\h5slider\pageSlider.js" />
+    <Content Include="Scripts\libs\jquery-1.8.3.min.js" />
+    <Content Include="Scripts\libs\jquery.page.js" />
     <Content Include="Scripts\libs\prefixfree.min.js" />
     <Content Include="Scripts\libs\h5slider\zepto-min.js" />
     <Content Include="Scripts\libs\h5slider\zepto.js" />
@@ -465,6 +468,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\CSS3\Ellipse.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Home\JqueryPage.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
