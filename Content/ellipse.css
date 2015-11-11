@@ -1,0 +1,234 @@
+﻿body {
+}
+.space {
+    height:120px;
+    width:1000px;
+    background-color:black;
+}
+.wheel {
+    height:50px;
+    width:50px;
+    border:2px solid white;
+    border-radius:50%;
+    animation:move 10s linear infinite;
+}
+@keyframes move {
+    100% {
+        transform:translateX(1000px) rotate(2962.962962962963deg);
+    }
+}
+.line {
+    height:1px;
+    width:25px;
+    border-bottom:2px solid white;
+    margin-top:22px;
+}
+.road {
+    height:1px;
+    width:1000px;
+    border-bottom:2px solid white;
+}
+
+.nightspace {
+    position:relative;
+    height:1000px;
+    width:1000px;
+    background-color:black;
+}
+
+.sun {
+    position:absolute;
+    top:450px;
+    left:450px;
+    background-color:#ff6a00;
+    height:100px;
+    width:100px;
+    border-radius:50%;
+}
+.sunLine {
+    position:absolute;
+    top:350px;
+    left:350px;
+    border:2px solid #ff6a00;
+    height:300px;
+    width:300px;
+    border-radius:50%;
+}
+.mercury {
+    position:absolute;
+    top:475px;
+    left:625px;
+    background-color:#4c83c7;
+    height:50px;
+    width:50px;
+    border-radius:50%;
+    animation:rotation 2.4s linear infinite;
+    transform-origin:-250% 50%;
+    transform-origin:-125px 25px;
+}
+@keyframes rotation {
+    to {
+        transform:rotate(360deg);
+    }
+}
+
+
+
+.sun2 {
+    position:absolute;
+    top:490px;
+    left:490px;
+    background-color:#ff6a00;
+    height:20px;
+    width:20px;
+    border-radius:50%;
+}
+.sunLineEllipse {
+    position:absolute;
+    top:350px;
+    left:350px;
+    border:2px solid #ff6a00;
+    height:300px;
+    width:300px;
+    border-radius:50% ;
+    -webkit-transform:scale3d(1,0.6,1);
+}
+
+.mercuryEllipse {
+    position:absolute;
+    top:395px;
+    left:345px;
+    height:10px;
+    width:10px;
+    animation:rotationEllipse 4s ease-in-out infinite;
+}
+@keyframes rotationEllipse{
+    0%,100%{
+        transform: translateX(0rem) scale(0.8);
+    }    
+    50%{
+        transform: translateX(278px) scale(1);
+    }
+}
+
+.mercuryEllipse span {
+    display:block;
+    height:10px;
+    width:10px;
+    background-color:#4c83c7;
+    animation:rotationEllipses 4s ease-in-out infinite;
+    border-radius:50%;
+}
+
+@keyframes rotationEllipses {
+    0%,100%{
+        transform: translateY(0rem) scale(0.8);
+    }    
+    50%{
+        transform: translateY(85px) scale(1);
+    }
+}
+
+
+
+
+
+@keyframes star_ani_00{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }   
+}
+
+@-webkit-keyframes star_ani_05{
+    0%,100%{
+        -webkit-transform: translateX(0rem);
+    }
+    50%{
+        -webkit-transform: translateX(-26.5rem);
+    }
+}
+@keyframes star_ani_05{
+    0%,100%{
+        transform: translateX(0rem);
+    }
+    50%{
+        transform: translateX(-26.5rem);
+    }
+}
+
+@-webkit-keyframes star_ani_06{
+    0%,100%{
+        -webkit-transform: translateY(0rem) scale(0.8);
+    }    
+    50%{
+        -webkit-transform: translateY(8rem) scale(1);
+    }
+}
+@keyframes star_ani_06{
+    0%,100%{
+        transform: translateY(0rem) scale(0.8);
+    }    
+    50%{
+        transform: translateY(8rem) scale(1);
+    }
+}
+
+.main{
+    position: relative;
+    height:100%;
+}
+.wrap-icon{
+    position:absolute;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    left:50%;
+    top: 12%;
+    z-index: 2;
+    opacity: 0;
+}
+
+.wrap-icon3{
+    width: 2.7rem;
+    height: 2.7rem;
+    margin-left: 12.4rem;
+    margin-top: 9rem;
+    -webkit-animation:star_ani_00 0.5s 2.5s linear forwards;
+    animation:star_ani_00 0.5s 2.5s linear forwards;
+}
+.wrap-icon3 span{
+    width:2.7rem;
+    height:2.7rem;
+    display: block;
+    -webkit-animation:star_ani_05 10s 0s ease-in-out infinite;
+    animation:star_ani_05 10s 0s ease-in-out infinite;
+}
+.wrap-icon3 i{
+    width:2rem;
+    height:2rem;
+    border-radius:1rem;
+    display: block;
+    background:#f60;
+    background-size: 100% 100%;
+    -webkit-animation:star_ani_06 10s 2.5s ease-in-out infinite;
+    animation:star_ani_06 10s 2.5s ease-in-out infinite;
+}
+
+.wrap-bg{
+    width:28rem;
+    height:28rem;
+    position: absolute;
+    top:12%;
+    left:50%;
+    margin-left:-14rem;
+    border:0.1rem solid #aaa;
+    border-radius:28rem;
+    -webkit-transform:scale3d(1,0.3,1);
+    transform:scale3d(1,0.3,1);
+}
+
+
+body {
+}

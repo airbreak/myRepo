@@ -156,6 +156,7 @@
     <Content Include="Content\css3mediaquery.css" />
     <Content Include="Content\css3mediaqueryforbg.css" />
     <Content Include="Content\dragable.css" />
+    <Content Include="Content\ellipse.css" />
     <Content Include="Content\h5swap.css" />
     <Content Include="Content\images\10.png" />
     <Content Include="Content\images\css3img.jpg" />
@@ -181,6 +182,7 @@
     <Content Include="Scripts\custom\h5swap.js" />
     <Content Include="Scripts\custom\indexDB.js" />
     <Content Include="Scripts\custom\jsinheritclass.js" />
+    <Content Include="Scripts\custom\mypage.js" />
     <Content Include="Scripts\custom\onpagescroll.js" />
     <Content Include="Scripts\custom\requirejs\drawline.js" />
     <Content Include="Scripts\custom\requirejs\drawcircle.js" />
@@ -286,6 +288,8 @@
     <Content Include="Scripts\libs\echarts.js" />
     <Content Include="Scripts\libs\h5slider\pageSlider.css" />
     <Content Include="Scripts\libs\h5slider\pageSlider.js" />
+    <Content Include="Scripts\libs\jquery-1.8.3.min.js" />
+    <Content Include="Scripts\libs\jquery.page.js" />
     <Content Include="Scripts\libs\prefixfree.min.js" />
     <Content Include="Scripts\libs\h5slider\zepto-min.js" />
     <Content Include="Scripts\libs\h5slider\zepto.js" />
@@ -465,10 +469,17 @@
     <Content Include="Views\CSS3\Truck.cshtml" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <Content Include="Views\Canvas\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Canvas\Waves.cshtml" />
+=======
+    <Content Include="Views\CSS3\Ellipse.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Home\JqueryPage.cshtml" />
+>>>>>>> 69be37d7e70b1b303467b5559a9c3e072dd970a6
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

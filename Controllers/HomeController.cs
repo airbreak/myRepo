@@ -152,5 +152,9 @@ namespace test.Controllers
             return View();
         }
 
+        public ActionResult JqueryPage() {
+            return View();
+        }
+
     }
 }
