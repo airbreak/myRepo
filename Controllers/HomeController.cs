@@ -11,13 +11,7 @@ namespace test.Controllers
     {
         //
         // GET: /Home/
-
-        public ActionResult Canvas()
-        {
-            return View("Canvas");
-        }
-
-
+        
         public ActionResult Index()
         {
             interfaceService a = new interfaceService();

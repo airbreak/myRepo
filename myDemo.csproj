@@ -131,6 +131,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\AngularHomeController.cs" />
+    <Compile Include="Controllers\CanvasController.cs" />
     <Compile Include="Controllers\ContentInsertSlideController.cs" />
     <Compile Include="Controllers\CropUserPhotoController.cs" />
     <Compile Include="Controllers\CSS3Controller.cs" />
@@ -176,6 +177,7 @@
     <Content Include="Content\truck.css" />
     <Content Include="Scripts\custom\animateloading.js" />
     <Content Include="Scripts\custom\audioTest.js" />
+    <Content Include="Scripts\custom\canvas\wave.js" />
     <Content Include="Scripts\custom\h5swap.js" />
     <Content Include="Scripts\custom\indexDB.js" />
     <Content Include="Scripts\custom\jsinheritclass.js" />
@@ -338,7 +340,7 @@
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Home\Canvas.cshtml" />
+    <Content Include="Views\Canvas\CanvasBasic.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\ShowImgFromImgByte\Index.cshtml" />
@@ -461,6 +463,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\CSS3\Truck.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Canvas\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Canvas\Waves.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
