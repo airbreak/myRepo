@@ -162,5 +162,9 @@ namespace test.Controllers
             return View();
         }
 
+        public ActionResult JquryLazyLoading() {
+            return View();
+        }
+
     }
 }

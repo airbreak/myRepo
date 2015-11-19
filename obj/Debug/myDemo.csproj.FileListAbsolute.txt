@@ -114,7 +114,6 @@ E:\code\myRepo\bin\test.pdb
 E:\code\myRepo\bin\Microsoft.AspNet.SignalR.Core.dll
 E:\code\myRepo\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
 E:\code\myRepo\bin\Microsoft.Web.Infrastructure.dll
-E:\code\myRepo\bin\Newtonsoft.Json.dll
 E:\code\myRepo\bin\SharpZipLib.dll
 E:\code\myRepo\bin\System.Net.Http.Formatting.dll
 E:\code\myRepo\bin\System.Web.Http.dll
@@ -145,3 +144,4 @@ E:\code\myRepo\obj\Debug\myDemo.csprojResolveAssemblyReference.cache
 E:\code\myRepo\obj\Debug\myDemo.csproj.ResolveComReference.cache
 E:\code\myRepo\obj\Debug\test.dll
 E:\code\myRepo\obj\Debug\test.pdb
+E:\code\myRepo\bin\Newtonsoft.Json.xml

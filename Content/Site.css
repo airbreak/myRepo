@@ -73,3 +73,15 @@ textarea
 {
     display: none;
 }
+
+.main {
+    width:90%;
+    min-height:500px;   
+    margin:20px auto;
+    border:1px solid #707074;
+    border-radius:3px;
+}
+
+ul li {
+    list-style:none;
+}
