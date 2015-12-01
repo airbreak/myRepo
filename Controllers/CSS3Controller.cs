@@ -44,6 +44,10 @@ namespace test.Controllers
         {
             return View();
         }
+        public ActionResult FakeLoader()
+        {
+            return View();
+        }
 
     }
 }
