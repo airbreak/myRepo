@@ -157,15 +157,63 @@
     <Content Include="Content\css3mediaqueryforbg.css" />
     <Content Include="Content\dragable.css" />
     <Content Include="Content\ellipse.css" />
+    <Content Include="Content\fakeLoader.css" />
     <Content Include="Content\h5swap.css" />
+    <Content Include="Content\images\1.ico" />
     <Content Include="Content\images\10.png" />
+    <Content Include="Content\images\2.ico" />
+    <Content Include="Content\images\2014-12-27_154451.jpg" />
     <Content Include="Content\images\css3img.jpg" />
     <Content Include="Content\images\home.png" />
+    <Content Include="Content\images\ico-img2ico.net.ico" />
     <Content Include="Content\images\icon-spin-s.png" />
+    <Content Include="Content\images\loading.gif" />
+    <Content Include="Content\images\longmao.png" />
+    <Content Include="Content\images\map.jpg" />
+    <Content Include="Content\images\mayday.jpg" />
+    <Content Include="Content\images\my.png" />
     <Content Include="Content\images\sec2_p2.png" />
+    <Content Include="Content\images\studentworks\1.png" />
+    <Content Include="Content\images\studentworks\10.png" />
+    <Content Include="Content\images\studentworks\11.png" />
+    <Content Include="Content\images\studentworks\12.png" />
+    <Content Include="Content\images\studentworks\13.png" />
+    <Content Include="Content\images\studentworks\2.png" />
+    <Content Include="Content\images\studentworks\3.png" />
+    <Content Include="Content\images\studentworks\4.png" />
+    <Content Include="Content\images\studentworks\5.png" />
+    <Content Include="Content\images\studentworks\6.png" />
+    <Content Include="Content\images\studentworks\7.png" />
+    <Content Include="Content\images\studentworks\8.png" />
+    <Content Include="Content\images\studentworks\9.png" />
+    <Content Include="Content\images\userImg\app1.png" />
+    <Content Include="Content\images\userImg\app2.png" />
+    <Content Include="Content\images\userImg\app3.png" />
+    <Content Include="Content\images\userImg\askforleave.png" />
+    <Content Include="Content\images\video\1.png" />
+    <Content Include="Content\images\video\2.png" />
+    <Content Include="Content\images\video\3.png" />
+    <Content Include="Content\images\video\4.png" />
+    <Content Include="Content\images\video\5.png" />
+    <Content Include="Content\images\video\6.png" />
+    <Content Include="Content\images\video\7.png" />
+    <Content Include="Content\images\video\8.png" />
+    <Content Include="Content\images\video\9.png" />
     <Content Include="Content\images\voteImgs\1.png" />
+    <Content Include="Content\images\voteImgs\10.png" />
+    <Content Include="Content\images\voteImgs\11.png" />
+    <Content Include="Content\images\voteImgs\12.png" />
+    <Content Include="Content\images\voteImgs\13.png" />
+    <Content Include="Content\images\voteImgs\14.png" />
+    <Content Include="Content\images\voteImgs\15.png" />
     <Content Include="Content\images\voteImgs\2.png" />
     <Content Include="Content\images\voteImgs\3.png" />
+    <Content Include="Content\images\voteImgs\4.jpg" />
+    <Content Include="Content\images\voteImgs\5.png" />
+    <Content Include="Content\images\voteImgs\6.png" />
+    <Content Include="Content\images\voteImgs\7.png" />
+    <Content Include="Content\images\voteImgs\8.png" />
+    <Content Include="Content\images\voteImgs\9.png" />
     <Content Include="Content\images\许冠杰 - 沉默是金.mp3" />
     <Content Include="Content\jquery.mobile-1.1.0.css" />
     <Content Include="Content\lesstest.css" />
@@ -174,6 +222,7 @@
     <Content Include="Content\map\1_7.png" />
     <Content Include="Content\map\2_3.png" />
     <Content Include="Content\map\2_4.png" />
+    <Content Include="Content\myFakeloader.css" />
     <Content Include="Content\progressBar.css" />
     <Content Include="Content\truck.css" />
     <Content Include="Scripts\custom\animateloading.js" />
@@ -182,6 +231,8 @@
     <Content Include="Scripts\custom\h5swap.js" />
     <Content Include="Scripts\custom\indexDB.js" />
     <Content Include="Scripts\custom\jsinheritclass.js" />
+    <Content Include="Scripts\custom\lazyloadimg.js" />
+    <Content Include="Scripts\custom\myfakeload.js" />
     <Content Include="Scripts\custom\mypage.js" />
     <Content Include="Scripts\custom\onpagescroll.js" />
     <Content Include="Scripts\custom\requirejs\drawline.js" />
@@ -192,14 +243,6 @@
     <Content Include="Scripts\libs\Angular\angular.min.js" />
     <Content Include="Scripts\libs\bootstrap\bootstap.css" />
     <Content Include="Content\buildIconByCSS3.css" />
-    <Content Include="Content\images\1.ico" />
-    <Content Include="Content\images\2.ico" />
-    <Content Include="Content\images\2014-12-27_154451.jpg" />
-    <Content Include="Content\images\ico-img2ico.net.ico" />
-    <Content Include="Content\images\map.jpg" />
-    <Content Include="Content\images\mayday.jpg" />
-    <Content Include="Content\images\longmao.png" />
-    <Content Include="Content\images\my.png" />
     <Content Include="Content\resultshow.css" />
     <Content Include="Content\rightPanelTest.css" />
     <Content Include="Content\tablecss.css" />
@@ -286,9 +329,11 @@
     <Content Include="Scripts\libs\corner.script.util.js" />
     <Content Include="Scripts\libs\echarts-all.js" />
     <Content Include="Scripts\libs\echarts.js" />
+    <Content Include="Scripts\libs\fakeLoader.min.js" />
     <Content Include="Scripts\libs\h5slider\pageSlider.css" />
     <Content Include="Scripts\libs\h5slider\pageSlider.js" />
     <Content Include="Scripts\libs\jquery-1.8.3.min.js" />
+    <Content Include="Scripts\libs\jquery.lazyload.min.js" />
     <Content Include="Scripts\libs\jquery.page.js" />
     <Content Include="Scripts\libs\prefixfree.min.js" />
     <Content Include="Scripts\libs\h5slider\zepto-min.js" />
@@ -306,7 +351,7 @@
     <Content Include="Scripts\libs\jquery.mobile-1.0.min.js" />
     <Content Include="Scripts\libs\jquery.mobile-1.1.0.js" />
     <Content Include="Scripts\libs\less-1.3.3.min.js" />
-    <Content Include="Scripts\libs\localstorage.js" />
+    <Content Include="Scripts\custom\localstorage.js" />
     <Content Include="Scripts\libs\myDragable.js" />
     <Content Include="Scripts\libs\onepagescroll\jquery.fullPage.css" />
     <Content Include="Scripts\libs\onepagescroll\jquery.fullPage.js" />
@@ -477,6 +522,15 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Home\JqueryPage.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Home\JquryLazyLoading.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Canvas\TimerClock.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\CSS3\FakeLoader.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

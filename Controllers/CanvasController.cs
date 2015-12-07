@@ -24,5 +24,10 @@ namespace test.Controllers
             return View();
         }
 
+        public ActionResult TimerClock()
+        {
+            return View();
+        }
+
     }
 }

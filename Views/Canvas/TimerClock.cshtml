@@ -1,0 +1,32 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="main">
+    <canvas id="timer"></canvas>
+</div>
+
+<script>
+    var Canvas = function (id, width, height) {
+        this.canvas = document.getElementById(id);
+        this.canvas.height = height;
+        this.canvas.width = width;
+        this.ctx = this.canvas.getContext('2d');
+        this.init();
+    };
+    Canvas.prototype = {
+        init: function () {
+            this.drawHead('Timer', '#8D4654');
+        },
+        drawHead: function (txt, color) {
+            this.ctx.fillStyle = color;
+            this.ctx.fillRect(0, 0, this.canvas.width, this.canvas.height / 2);
+            this.ctx.font = 'Arial 25px';
+            this.ctx.fontStyle = 'Arial 25px';
+            this.ctx.textAlign = 'center';
+            this.ctx.strokeStyle = 'black';
+            this.ctx.fillText(txt, 0, 34);
+        },
+    };
+    new Canvas('timer', 200, 100);
+</script>
+
